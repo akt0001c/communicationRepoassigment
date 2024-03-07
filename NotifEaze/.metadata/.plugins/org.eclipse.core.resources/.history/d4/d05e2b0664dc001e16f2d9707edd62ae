@@ -1,0 +1,5 @@
+package com.NotifEaze.NotifEaze.service.impl;
+
+public class EmailServiceImpl {
+
+}

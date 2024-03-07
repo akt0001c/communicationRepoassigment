@@ -1,0 +1,14 @@
+package com.NotifEaze.NotifEaze.service.impl;
+
+import com.NotifEaze.NotifEaze.dto.BaseEmailResponse;
+import com.NotifEaze.NotifEaze.service.EmailService;
+
+public class EmailServiceImpl implements EmailService {
+
+	@Override
+	public BaseEmailResponse sendEmail(String to, String subject, String body) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

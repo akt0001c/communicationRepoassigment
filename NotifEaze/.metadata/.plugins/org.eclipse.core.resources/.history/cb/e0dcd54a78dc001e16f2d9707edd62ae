@@ -1,0 +1,38 @@
+package com.NotifEaze.NotifEaze.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.NotifEaze.NotifEaze.dto.BasePushNotificationResponse;
+import com.NotifEaze.NotifEaze.mock.GupshupMock;
+@Service
+public class PushNotificationServiceImpl implements com.NotifEaze.NotifEaze.service.PushNotificationService {
+
+	private GupshupMock gupshupmock;
+	
+	
+    @Autowired
+	public void setGupshupmock(GupshupMock gupshupmock) {
+		this.gupshupmock = gupshupmock;
+	}
+
+   
+	@Override
+	public BasePushNotificationResponse sendNotification(String fcmToken, String message) {
+		String resmessage= gupshupmock.getPnMockedResponses(fcmToken);
+		BasePushNotificationResponse res= null;
+		
+		if(fcmToken.equals("FCMToken1"))
+			  res= new BasePushNotificationResponse(true,resmessage);
+		else
+		{
+			resmessage= gupshupmock.getPnMockedResponses("FCMToken2");
+			res= new BasePushNotificationResponse(false,resmessage);
+		}
+		
+		
+		
+		return null;
+	}
+
+}

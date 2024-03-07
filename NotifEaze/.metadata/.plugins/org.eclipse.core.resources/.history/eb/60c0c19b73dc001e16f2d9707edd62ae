@@ -1,0 +1,21 @@
+package com.NotifEaze.NotifEaze.service.impl;
+
+import com.NotifEaze.NotifEaze.dto.BaseSmsResponse;
+import com.NotifEaze.NotifEaze.dto.SmsDeliveryStatus;
+import com.NotifEaze.NotifEaze.service.SmsService;
+
+public class SmsServiceImpl implements SmsService {
+
+	@Override
+	public BaseSmsResponse sendSms(String phoneNumber, String message) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SmsDeliveryStatus checkDeliveryStatus(String messageId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

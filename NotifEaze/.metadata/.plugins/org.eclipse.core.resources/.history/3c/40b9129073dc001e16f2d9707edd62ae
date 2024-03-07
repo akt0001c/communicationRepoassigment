@@ -1,0 +1,29 @@
+package com.NotifEaze.NotifEaze.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.NotifEaze.NotifEaze.dto.BasePushNotificationResponse;
+import com.NotifEaze.NotifEaze.mock.GupshupMock;
+import com.NotifEaze.NotifEaze.mock.KayleraMock;
+
+public class PushNotificationServiceImpl implements com.NotifEaze.NotifEaze.service.PushNotificationService {
+
+	private GupshupMock gupshupmock;
+	private KayleraMock kayleramock;
+	
+    @Autowired
+	public void setGupshupmock(GupshupMock gupshupmock) {
+		this.gupshupmock = gupshupmock;
+	}
+
+    @Autowired
+	public void setKayleramock(KayleraMock kayleramock) {
+		this.kayleramock = kayleramock;
+	}
+	@Override
+	public BasePushNotificationResponse sendNotification(String fcmToken, String message) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

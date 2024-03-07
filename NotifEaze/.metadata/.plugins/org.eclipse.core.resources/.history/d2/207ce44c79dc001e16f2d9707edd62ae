@@ -1,0 +1,41 @@
+package com.NotifEaze.NotifEaze.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.NotifEaze.NotifEaze.dto.BaseSmsResponse;
+import com.NotifEaze.NotifEaze.dto.SmsDeliveryStatus;
+import com.NotifEaze.NotifEaze.mock.GupshupMock;
+import com.NotifEaze.NotifEaze.mock.KayleraMock;
+import com.NotifEaze.NotifEaze.service.SmsService;
+
+
+@Service
+public class SmsServiceImpl implements SmsService {
+
+	private GupshupMock gupshupmock;
+	private KayleraMock kayleramock;
+	
+    @Autowired
+	public void setGupshupmock(GupshupMock gupshupmock) {
+		this.gupshupmock = gupshupmock;
+	}
+
+    @Autowired
+	public void setKayleramock(KayleraMock kayleramock) {
+		this.kayleramock = kayleramock;
+	}
+
+	@Override
+	public BaseSmsResponse sendSms(String phoneNumber, String message) {
+		
+		return null;
+	}
+
+	@Override
+	public SmsDeliveryStatus checkDeliveryStatus(String messageId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

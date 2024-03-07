@@ -1,0 +1,32 @@
+package com.NotifEaze.NotifEaze.controller;
+
+import com.NotifEaze.NotifEaze.dto.BaseEmailResponse;
+import com.NotifEaze.NotifEaze.dto.BasePushNotificationResponse;
+import com.NotifEaze.NotifEaze.dto.BaseSmsResponse;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/communication")
+public class CommunicationController {
+    @PostMapping("/send-sms")
+    public ResponseEntity<BaseSmsResponse> sendSms() {
+        /* To be developed */
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/send-email")
+    public ResponseEntity<BaseEmailResponse> sendEmail() {
+        /* To be developed */
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/send-notification")
+    public ResponseEntity<BasePushNotificationResponse> sendNotification() {
+        /* To be developed */
+        return ResponseEntity.ok().build();
+    }
+}

@@ -1,0 +1,34 @@
+package com.NotifEaze.NotifEaze.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.NotifEaze.NotifEaze.dto.BaseEmailResponse;
+import com.NotifEaze.NotifEaze.mock.GupshupMock;
+import com.NotifEaze.NotifEaze.mock.KayleraMock;
+import com.NotifEaze.NotifEaze.service.EmailService;
+
+@Service
+public class EmailServiceImpl implements EmailService {
+	
+	private GupshupMock gupshupmock;
+	private KayleraMock kayleramock;
+	
+    @Autowired
+	public void setGupshupmock(GupshupMock gupshupmock) {
+		this.gupshupmock = gupshupmock;
+	}
+
+    @Autowired
+	public void setKayleramock(KayleraMock kayleramock) {
+		this.kayleramock = kayleramock;
+	}
+
+
+	@Override
+	public BaseEmailResponse sendEmail(String to, String subject, String body) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

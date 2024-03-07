@@ -1,0 +1,14 @@
+package com.NotifEaze.NotifEaze.service.impl;
+
+import com.NotifEaze.NotifEaze.dto.BasePushNotificationResponse;
+import com.NotifEaze.NotifEaze.service.PushNotificationService;
+
+public class KayleraPushNotificationService implements PushNotificationService {
+
+	@Override
+	public BasePushNotificationResponse sendNotification(String fcmToken, String message) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
